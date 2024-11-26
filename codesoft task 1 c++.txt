@@ -1,0 +1,22 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    vector<string> books;
+    string book;
+    char choice;
+    
+    do {
+        cout << "Enter book title: ";
+        cin >> ws; getline(cin, book);
+        books.push_back(book);
+        cout << "Add another book? (y/n): ";
+        cin >> choice;
+    } while(choice == 'y');
+    
+    cout << "Library Collection:\n";
+    for(auto& b : books) cout << "- " << b << '\n';
+    
+    return 0;
+}

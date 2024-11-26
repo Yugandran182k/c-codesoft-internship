@@ -1,0 +1,22 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    vector<string> tasks;
+    string task;
+    char choice;
+
+    do {
+        cout << "Enter a task: ";
+        cin >> ws; getline(cin, task);
+        tasks.push_back(task);
+        cout << "Add another task? (y/n): ";
+        cin >> choice;
+    } while(choice == 'y');
+
+    cout << "Your To-Do List:\n";
+    for(auto& t : tasks) cout << "- " << t << '\n';
+
+    return 0;
+}
